@@ -20,15 +20,15 @@
         <td><%= pet.race %></td>
         <td><%= pet.birthdate %></td>
         <td><%= pet.history_count(pet)%></td>
-        <td><%= link_to 'Show histories', pet_pet_histories_path(pet) %></td>
-        <td><%= link_to 'Show', pet %></td>
-        <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
-        <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show histories', client_pet_pet_histories_path(@client, pet) %></td>
+        <td><%= link_to 'Show', client_pet_path(@client, pet) %></td>
+        <td><%= link_to 'Edit', edit_client_pet_path(@client, pet) %></td>
+        <td><%= link_to 'Destroy', client_pet_path(@client, pet), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Pet', new_pet_path %>
+<%= link_to 'Back to clients', root_path %>
+<%= link_to 'New Pet', new_client_pet_path(@client) %>

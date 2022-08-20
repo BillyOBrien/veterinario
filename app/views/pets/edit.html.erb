@@ -2,5 +2,5 @@
 
 <%= render 'form', pet: @pet %>
 
-<%= link_to 'Show', @pet %> |
-<%= link_to 'Back', pets_path %>
+<%= link_to 'Show', client_pet_path(@client, @pet) %> |
+<%= link_to 'Back', client_pets_path(@client) %>
