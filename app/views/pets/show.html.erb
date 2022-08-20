@@ -28,13 +28,14 @@
 
   <tbody>
     <tr>
-      <td><%= @pet.avg_weight %></td>
-      <td><%= @pet.avg_height %></td>
-      <td><%= @pet.max_weight %></td>
-      <td><%= @pet.max_height%></td>
+      <td><%= @pet.avg_weight(@pet) %></td>
+      <td><%= @pet.avg_height(@pet) %></td>
+      <td><%= @pet.max_weight(@pet) %></td>
+      <td><%= @pet.max_height(@pet) %></td>
     </tr>
   </tbody>
 </table>
 
 <%= link_to 'Edit', edit_pet_path(@pet) %> |
-<%= link_to 'Back', pets_path %>
+<%= link_to 'Back', pets_path %> |
+<%= link_to 'Show histories', pet_pet_histories_path(@pet) %>
